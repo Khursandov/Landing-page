@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,.9);
+    color: white;
+    font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+.showcase {  
+    /* if i put .showcase::after it is not working*/ 
+    height: 100vh;
+    width: 100%;
+    background-image: url(showcase.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    text-align: center;
+    transition: all 1000ms;
+}
+.showcase:hover{   
+    /* if i put .showcase:hover::after it is not working*/
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.showcase:hover .content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.content {
+    position: absolute;
+    width: 100%;
+    padding-top: 10%;
+    transition: all 1000ms;
+    
+/*    width: 300px*/
+}
+.content .logo{
+    width: 180px;
+    height: 180px;
+}
+.content .title{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+.content .text{
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+/*Services*/
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.center{
+    text-align: center;
+    margin: auto;
+}
+.grid-3{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+/*    the same with this*/
+/*    grid-template-columns: 1rf 1rf 1rf;*/
+}
+.grid-2{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+/*    the same with this*/
+/*    grid-template-columns: 1rf 1rf 1rf;*/
+}
+
+
+.bg-light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark{
+    background-color: #333;
+    color: #f4f4f4;
+}
+footer{
+    padding: 2rem;
+}
+/*Small screens*/
+/*
+.showcase{
+    height: 50vh;
+} 
+*/
+@media only screen and (max-width: 600px) {
+.showcase{
+    height: 50vh;
+} 
+    .content{
+        top: 10%;
+        margin-top: 5px;
+    }
+    .content .logo{
+        height: 140px;
+        width: 140px;
+    }
+    .content .text{
+        display: none;
+    }
+    .grid-3{
+        grid-template-columns: 1fr;
+    }
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .services div{
+        border-bottom: #333 solid 2px;
+        padding: 1.2rem 1rem;
+    }
+}
+@media only screen and (max-height: 500px) {
+    .content .title,
+    .content .text{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer p{
+    margin: 0;
+}
+
+.unselectable { 
+-webkit-touch-callout: none; 
+/*iOS Safari*/ 
+-webkit-user-select: none; 
+/*Chrome/Safari/Opera*/ 
+-khtml-user-select: none; 
+/*Konqueror*/ 
+-moz-user-select: none; 
+/*Firefox*/ 
+-ms-user-select: none; 
+/*Internet Explorer/Edge*/ 
+user-select: none; 
+/*Non-prefixed version, currently not supported by any browser*/ 
+} 
